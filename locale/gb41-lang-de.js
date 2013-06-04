@@ -126,7 +126,7 @@ Ext.onReady(function () {
 	/**
 	* German texts for GbPermalinkPanel
 	*/
-	Ext.define('Gb41.locale.de.controller.GbPermalinkPanel', {
+	Ext.define('Gb41.locale.de.view.GbPermalinkPanel', {
 		override: 'Gb41.view.GbPermalinkPanel',
 			txtLink: 'Der direkte Link auf diese Karte:',
 			txtShortLink: 'verkürzte URL',
@@ -140,7 +140,7 @@ Ext.onReady(function () {
 	/**
 	* German texts for GbMapPanel
 	*/
-	Ext.define('Gb41.locale.de.controller.GbMapPanel', {
+	Ext.define('Gb41.locale.de.view.GbMapPanel', {
 		override: 'Gb41.view.GbMapPanel',
 			txtToolTipPrev: 'zurück zum <b>vorherigen</b> Kartenausschnitt',
 			txtToolTipNext: 'weiter zum <b>nächsten</b> Kartenausschnitt',
@@ -160,7 +160,7 @@ Ext.onReady(function () {
 	/**
 	* German texts for GbPrintPanel
 	*/
-	Ext.define('Gb41.locale.de.controller.GbPrintPanel', {
+	Ext.define('Gb41.locale.de.view.GbPrintPanel', {
 		override: 'Gb41.view.GbPrintPanel',
 			txtDescription: 'Beschriftung',
 			txtTitle: 'Kartentitel',
@@ -168,6 +168,7 @@ Ext.onReady(function () {
 			txtPageSetup: 'Seiteneinstellungen',
 			txtLayout: 'Layout',
 			txtResolution: 'Auflösung',
+			txtScaleCombo: 'Massstabswahl',
 			txtScale: 'Massstab',
 			txtRotation: 'Rotation',
 			txtOutputFormat: 'Dateiformat',
@@ -176,20 +177,76 @@ Ext.onReady(function () {
 	});
 
 	/**
-	* German texts for FormAwelLhForstfeuerZH
+	* German texts for GbEditForm
 	*/
-	Ext.define('Gb41.locale.de.controller.edit.FormAwelLhForstfeuerZH', {
-		override: 'Gb41.view.edit.FormAwelLhForstfeuerZH',
+	Ext.define('Gb41.locale.de.view.edit.GbEditForm', {
+		override: 'Gb41.view.edit.GbEditForm',
+			txtBtnAdd: 'Hinzufügen',
+			txtBtnAddTooltip: 'Hinzufügen',
+			txtBtnSelect: 'Auswählen, Bearbeiten',
+			txtBtnSelectTooltip: 'Auswählen, Bearbeiten',
 			txtBtnEdit: 'Bearbeiten',
-			txtBtnEditTooltip: 'Bewilligungsinformationen bearbeiten oder Standort verschieben.',
-			txtBtnAdd: 'Bewilligung hinzufügen',
-			txtBtnAddTooltip: 'Forstfeuer auf der Karte erfassen und Bewilligungsinformationen eingeben.',
-			txtBtnSelect: 'Forstfeuer auswählen',
-			txtBtnSelectTooltip: 'Forstfeuer auf der Karte auswählen und anschliessend anpassen oder löschen.',
+			txtBtnEditTooltip: 'Bearbeiten',
+			txtBtnCopy: 'Kopieren',
+			txtBtnCopyTooltip: 'Kopieren',			
 			txtBtnDelete: 'Löschen',
-			txtBtnDeleteTooltip: 'Bewilligung aus der Datenbank entfernen.',
-			txtBasicHelpMessage: 'Hinzufügen oder Verändern eines Forstfeuers.'
+			txtBtnDeleteTooltip: 'Löschen',
+			txtBtnBackToSelection: 'Zurück zur Auswahl',
+			txtBtnBackToSelectionTooltip: 'Zurück zur Auswahl',
+			txtBtnEditSave: 'Speichern',
+			txtBtnEditReset: 'Zurücksetzen',
+			txtBtnEditCancel: 'Abbrechen',
+			txtHelpTitle: 'Anleitung',
+			txtHelpWelcomeMessage: 'Anleitung',
+			txtSelectedFeaturesTitle: 'Gefundene Datensätze'
 	});
 
+	/**
+	* German texts for GbEditToolsController
+	*/
+	Ext.define('Gb41.locale.de.controller.GbEditToolsController', {
+		override: 'Gb41.controller.GbEditToolsController',
+			txtBasicHelpMessage: 'Objekt auswählen oder hinzufügen durch Klick auf die Karte.',
+			txtSelectRowMessage: 'Objekt auswählen durch Klick auf die Tabelle.',
+			txtAddMessage: 'Objekt hinzufügen durch Klick auf die Karte.',
+			txtSelectMessage: 'Objekt zur Bearbeitung auswählen durch Klick auf die Karte.',
+			txtNoPermissionMessage: 'Sie sind nicht berechtigt, dieses Objekt zu bearbeiten.',
+			txtMsgFeatureSaved: 'Objekt erfolgreich gespeichert.',
+			txtMsgFeatureDeleted: 'Objekt erfolgreich gelöscht.',
+			txtMsgError: 'Fehler: Objekt nicht erfolgreich gespeichert.',
+			txtMsgboxSaveFailTitle: 'Objekt speichern',
+			txtMsgboxSaveFailMsg: 'Speichern fehlgeschlagen.',
+			txtMsgboxDeleteFeatureTitle: 'Objekt löschen?',
+			txtMsgboxDeleteFeatureMsg: 'Sind Sie sicher, dass Sie dieses Objekt löschen möchten?',
+			txtMsgboxFormValidTitle: 'Formular-Validierung',
+			txtMsgboxFormValidMsg: 'Bitte Formular vervollständigen.',
+			txtMsgboxEditCancelTitle: 'Erfassung abgebrochen',
+			txtMsgboxEditCancelMsg: 'Letzte Änderungen nicht gespeichert!'
+	});
+
+	/**
+	* German texts for FormToponameZH
+	*/
+	Ext.define('Gb41.locale.de.view.edit.FormToponameZH', {
+		override: 'Gb41.view.edit.FormToponameZH',
+			// Texte
+			txtBtnDrawPolygon: 'Polygon',
+			txtBtnDrawPolygonTooltip: 'Polygon digitalisieren',
+			txtBtnDrawCircle: 'Kreis',
+			txtBtnDrawCircleTooltip: 'Kreis zeichnen',
+			txtPolygonSides: 'Seiten',
+			txtIrregularShape: 'Form',
+			txtBoxLabel: 'irregulär',
+			txtBtnModifyVertex: 'Ändern',
+			txtBtnModifyVertexTooltip: 'Vertices editieren', 
+			txtBtnModifyRotate: 'Rotieren',
+			txtBtnModifyRotateTooltip: 'Rotieren', 
+			txtBtnModifySize: 'Grösse ändern',
+			txtBtnModifySizeTooltip: 'Grösse ändern',
+			txtBtnModifyRotateSize: 'Kombination',
+			txtBtnModifyRotateSizeTooltip: 'Rotieren, Grösse ändern', 
+			txtBtnModifyShape: 'Verzerren',
+			txtBtnModifyShapeTooltip: 'Form verzerren'			
+	});
 
 });
